@@ -1,10 +1,15 @@
 package com.example.androidsdk;
 
+import android.graphics.Bitmap;
+import android.os.Build;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class webviewClient extends WebViewClient
 {
+    public String myurl;
+
     @Override
     public boolean shouldOverrideUrlLoading(final WebView view, final String url)
     {
@@ -23,5 +28,13 @@ public class webviewClient extends WebViewClient
 
 
         return true;
+    }
+
+
+    @Override
+    public void onPageFinished(WebView view, String url) {
+
+         myurl = view.getUrl();
+        super.onPageFinished(view, url);
     }
 }
