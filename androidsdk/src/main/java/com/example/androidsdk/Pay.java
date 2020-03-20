@@ -24,15 +24,24 @@ import java.util.List;
 import java.util.Set;
 
 public class Pay  extends AppCompatActivity {
+
+    public WebView mywebview;
     public static String URL ="" ;
+
+
     public String PaymentKey;
     public int IframeID;
-   public WebView mywebview;
+    public  String Endpoint= "";
+
+
     String success ="";
     String Id ="";
-    String Endpoint= "";
-    private List<String> urls = new ArrayList<String>();
-
+    String amount_cents="";
+    String integration_id="";
+    String has_parent_transaction="";
+    String txn_response_code="";
+    String  acq_response_code="";
+    //Uri uri;
     public void StartPayment(String paymentKey, int iframeID) {
 
         mywebview  = findViewById(R.id.webView);
@@ -62,15 +71,27 @@ public class Pay  extends AppCompatActivity {
               if(view.getOriginalUrl().contains(Endpoint)){
 
                   URL = view.getOriginalUrl();
-                  Uri uri = Uri.parse(URL);
+                Uri  uri= Uri.parse(URL);
 
                 success = uri.getQueryParameter("success");
                 Id = uri.getQueryParameter("id");
+                amount_cents = uri.getQueryParameter("amount_cents");
+                integration_id = uri.getQueryParameter("integration_id");
+                has_parent_transaction = uri.getQueryParameter("has_parent_transaction");
+                txn_response_code = uri.getQueryParameter("txn_response_code");
+                acq_response_code = uri.getQueryParameter("acq_response_code");
 
                 Intent result = new Intent();
                 result.putExtra("success",success);
                 result.putExtra("ID",Id);
+                result.putExtra("amount_cents",amount_cents);
+               result.putExtra("integration_id",integration_id);
+               result.putExtra("has_parent_transaction",has_parent_transaction);
+               result.putExtra("txn_response_code",txn_response_code);
+               result.putExtra("acq_response_code",acq_response_code);
+
                 setResult(RESULT_OK,result);
+
                   finish();
 
 
@@ -98,16 +119,6 @@ public class Pay  extends AppCompatActivity {
 
     }
 
-//    public void checkpay(){
-//
-//        Uri uri = Uri.parse(URL);
-//        String success = uri.getQueryParameter("success");
-//        String Id = uri.getQueryParameter("id");
-//        Log.d(TAG, "Success:"+success+"ID:"+Id);
-//        Log.d(TAG, "checkpay: "+URL);
-//
-//    }
-
 
     @Override
     public void onConfigurationChanged(Configuration newConfig){
@@ -129,6 +140,16 @@ public class Pay  extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        try{
+            Runtime.getRuntime().gc();
+            finish();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 
