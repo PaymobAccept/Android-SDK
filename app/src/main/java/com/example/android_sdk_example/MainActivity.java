@@ -16,7 +16,7 @@ import com.example.androidsdk.IntentKeys;
 import com.example.androidsdk.Pay;
 
 public class MainActivity extends AppCompatActivity {
-//    String paymentKey="ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpkWEp5Wlc1amVTSTZJa1ZIVUNJc0ltVjRjQ0k2TXpZd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREUxT0RRM05EUTJORGtzSW5WelpYSmZhV1FpT2pNMU5UVXNJbTl5WkdWeVgybGtJam8wTnpVMk1qZ3dMQ0poYlc5MWJuUmZZMlZ1ZEhNaU9qRXdNQ3dpY0cxclgybHdJam9pTkRFdU1qTTBMakUxTkM0eU1qQWlMQ0pwYm5SbFozSmhkR2x2Ymw5cFpDSTZORGcxT0N3aWJHOWphMTl2Y21SbGNsOTNhR1Z1WDNCaGFXUWlPbVpoYkhObExDSmlhV3hzYVc1blgyUmhkR0VpT25zaVptbHljM1JmYm1GdFpTSTZJa05zYVdabWIzSmtJaXdpYkdGemRGOXVZVzFsSWpvaVRtbGpiMnhoY3lJc0luTjBjbVZsZENJNklrVjBhR0Z1SUV4aGJtUWlMQ0ppZFdsc1pHbHVaeUk2SWpnd01qZ2lMQ0ptYkc5dmNpSTZJalF5SWl3aVlYQmhjblJ0Wlc1MElqb2lPREF6SWl3aVkybDBlU0k2SWtwaGMydHZiSE5yYVdKMWNtZG9JaXdpYzNSaGRHVWlPaUpWZEdGb0lpd2lZMjkxYm5SeWVTSTZJa05TSWl3aVpXMWhhV3dpT2lKamJHRjFaR1YwZEdVd09VQmxlR0V1WTI5dElpd2ljR2h2Ym1WZmJuVnRZbVZ5SWpvaUt6ZzJLRGdwT1RFek5USXhNRFE0TnlJc0luQnZjM1JoYkY5amIyUmxJam9pTURFNE9UZ2lMQ0psZUhSeVlWOWtaWE5qY21sd2RHbHZiaUk2SWs1QkluMTkuNE92NmFyM3JBUGNlM2h3TmxMRmFaV1pEQ0pwZW44ZjBHaGlBc0JRZFJCNFJpZ1JnMHM0TUJPV2xuSTdTeGJaRS1sTFhPRFhtaFU1ZHAzMnNTX2RKdkE=";
+//  String paymentKey="ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpkWEp5Wlc1amVTSTZJa1ZIVUNJc0ltVjRjQ0k2TXpZd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREUxT0RRM05EUTJORGtzSW5WelpYSmZhV1FpT2pNMU5UVXNJbTl5WkdWeVgybGtJam8wTnpVMk1qZ3dMQ0poYlc5MWJuUmZZMlZ1ZEhNaU9qRXdNQ3dpY0cxclgybHdJam9pTkRFdU1qTTBMakUxTkM0eU1qQWlMQ0pwYm5SbFozSmhkR2x2Ymw5cFpDSTZORGcxT0N3aWJHOWphMTl2Y21SbGNsOTNhR1Z1WDNCaGFXUWlPbVpoYkhObExDSmlhV3hzYVc1blgyUmhkR0VpT25zaVptbHljM1JmYm1GdFpTSTZJa05zYVdabWIzSmtJaXdpYkdGemRGOXVZVzFsSWpvaVRtbGpiMnhoY3lJc0luTjBjbVZsZENJNklrVjBhR0Z1SUV4aGJtUWlMQ0ppZFdsc1pHbHVaeUk2SWpnd01qZ2lMQ0ptYkc5dmNpSTZJalF5SWl3aVlYQmhjblJ0Wlc1MElqb2lPREF6SWl3aVkybDBlU0k2SWtwaGMydHZiSE5yYVdKMWNtZG9JaXdpYzNSaGRHVWlPaUpWZEdGb0lpd2lZMjkxYm5SeWVTSTZJa05TSWl3aVpXMWhhV3dpT2lKamJHRjFaR1YwZEdVd09VQmxlR0V1WTI5dElpd2ljR2h2Ym1WZmJuVnRZbVZ5SWpvaUt6ZzJLRGdwT1RFek5USXhNRFE0TnlJc0luQnZjM1JoYkY5amIyUmxJam9pTURFNE9UZ2lMQ0psZUhSeVlWOWtaWE5qY21sd2RHbHZiaUk2SWs1QkluMTkuNE92NmFyM3JBUGNlM2h3TmxMRmFaV1pEQ0pwZW44ZjBHaGlBc0JRZFJCNFJpZ1JnMHM0TUJPV2xuSTdTeGJaRS1sTFhPRFhtaFU1ZHAzMnNTX2RKdkE=";
 //    int IframeID =7898 ;
 //    String Endpoint = " https://accept.paymobsolutions.com/api/acceptance/post_pay";
 //    String success = "";
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 //    String txn_response_code="";
 //    String  acq_response_code="";
 //    private static final String TAG = "tag";
-
-
+//
+//
 //  private void StartPayActivity(){
 //
 //
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//               StartPayActivity();
+      //         StartPayActivity();
 
 
 
@@ -77,5 +77,5 @@ public class MainActivity extends AppCompatActivity {
 //               Log.d(TAG, "amount cents: "+acq_response_code);
 //          }
 //       }
-    }
+   }
 }
